@@ -1,4 +1,4 @@
-from ._anvil_designer import Form1Template
+from ._anvil_designer import MainTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -7,19 +7,18 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ..Main import Main
 
-class Form1(Form1Template):
+
+class Main(MainTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.content_panel.add_component(Main(), full_width_row=True)
+
+    mnist = MNIST.get_tabular_dataset()
+    mnist_df = mnist.to_pandas_dataframe()
+    mnist_df.info()
+      
+      
     
-
-
-
-
-
-
 
 
