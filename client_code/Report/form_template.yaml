@@ -1,0 +1,119 @@
+container:
+  type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}', spacing_below: none,
+    background: ''}
+components:
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"SZEZZI":11,"FSSSMC":6,"QWSUPS":11,"UKUGDC":38}',
+    spacing_below: small, background: ''}
+  name: card
+  layout_properties: {grid_position: 'TJYSRT,CYGMRW', full_width_row: true}
+  components:
+  - type: Label
+    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Total Responses:', font_size: 14, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'XKUWZO,SZEZZI'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: 14, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: total_label
+    layout_properties: {grid_position: 'XKUWZO,FSSSMC'}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_1
+    layout_properties: {grid_position: 'XKUWZO,UKUGDC'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:Gray
+        600', visible: true, text: '', font_size: 14, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: date_label
+    layout_properties: {grid_position: 'XKUWZO,QWSUPS'}
+  - type: ColumnPanel
+    properties: {role: question-box, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: 'theme:Gray 300'}
+    name: column_panel_1
+    layout_properties: {grid_position: 'VQQTUY,WXKIHR'}
+    components:
+    - type: Label
+      properties: {role: subheading, align: left, tooltip: '', border: '', foreground: 'theme:Primary
+          500', visible: true, text: 'Age of responders:', font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_2
+      layout_properties: {grid_position: 'WBGZNI,YQRENI'}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '290', visible: true,
+        tooltip: '', interactive: true}
+      name: age_plot
+      layout_properties: {grid_position: 'IQTCFD,VNCDMQ'}
+      data_bindings: []
+  - type: ColumnPanel
+    properties: {role: question-box, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: 'theme:Gray 300'}
+    name: column_panel_2
+    layout_properties: {grid_position: 'QTTHXF,VRGLYO'}
+    components:
+    - type: Label
+      properties: {role: subheading, align: left, tooltip: '', border: '', foreground: 'theme:Primary
+          500', visible: true, text: 'On average, how often would you say you use
+          this software?', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: label_5
+      layout_properties: {grid_position: 'HDWCDS,AZKDMA'}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '290', visible: true,
+        tooltip: '', interactive: true}
+      name: freq_plot
+      layout_properties: {grid_position: 'OYOFBL,PVDZFV'}
+  - type: ColumnPanel
+    properties: {role: question-box, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: 'theme:Gray 300'}
+    name: column_panel_3
+    layout_properties: {grid_position: 'BLDLUQ,SKSHLK'}
+    components:
+    - type: Label
+      properties: {role: subheading, align: left, tooltip: '', border: '', foreground: 'theme:Primary
+          500', visible: true, text: 'How do you normally use the software? (Select
+          all that apply)', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: label_6
+      layout_properties: {grid_position: 'SBUMAN,MUQIGH'}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '290', visible: true,
+        tooltip: '', interactive: true}
+      name: method_plot
+      layout_properties: {grid_position: 'JVGFIX,QUACWB'}
+  - type: ColumnPanel
+    properties: {role: question-box, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: 'theme:Gray 300'}
+    name: column_panel_4
+    layout_properties: {grid_position: 'XSSOFU,VAYYWO'}
+    components:
+    - type: Label
+      properties: {role: subheading, align: left, tooltip: '', border: '', foreground: 'theme:Primary
+          500', visible: true, text: 'Rate the following sentence: This software has
+          significantly saved me time.', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_3
+      layout_properties: {grid_position: 'NOGRRH,KXXLBI'}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '290', visible: true,
+        tooltip: '', interactive: true}
+      name: rating_plot
+      layout_properties: {grid_position: 'BTQOWX,KVRADF'}
+is_package: true
