@@ -30,29 +30,6 @@ startup_form: Form1
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap"
     rel="stylesheet">'}
 db_schema:
-  users:
-    title: Users
-    client: none
-    server: full
-    columns:
-    - name: email
-      admin_ui: {width: 200}
-      type: string
-    - name: enabled
-      admin_ui: {width: 100}
-      type: bool
-    - name: n_password_failures
-      admin_ui: {width: 200}
-      type: number
-    - name: last_login
-      admin_ui: {width: 200}
-      type: datetime
-    - name: remembered_logins
-      admin_ui: {width: 200}
-      type: simpleObject
-    - name: password_hash
-      admin_ui: {width: 200}
-      type: string
   ratings:
     title: Ratings
     client: search
