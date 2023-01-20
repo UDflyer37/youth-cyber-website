@@ -1,9 +1,6 @@
 from ._anvil_designer import MainTemplate
 from anvil import *
-import plotly.graph_objects as go
 import anvil.server
-import anvil.google.auth, anvil.google.drive
-from anvil.google.drive import app_files
 import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -15,8 +12,14 @@ class Main(MainTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     
-    self.training_data_image.figure = anvil.server.call('display_image')
-      
+    self.training_data_image.figure = display_image()
+    
+  def display_image(self):
+    mnist = pd.read_csv(data_files['mnist_train.csv'])
+    imageAsArray = mnist[0,:-1].reshape(28, 28)
+    plt.imshow(imageAsArray, cmap='gray')
+    fig = plt.show()
+    return fig
       
     
 

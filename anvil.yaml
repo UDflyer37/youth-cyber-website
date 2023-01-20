@@ -1,13 +1,11 @@
-dependencies:
-- app_id: NJQATJAQ5NBG2EDN
-  version: {dev: false}
+dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
 - source: /runtime/services/anvil/email.yml
   client_config: {}
-  server_config: {}
+  server_config: {custom_smtp: false}
 - source: /runtime/services/anvil/users.yml
   client_config: {allow_signup: false, enable_automatically: true, use_email: true,
     confirm_email: false, require_secure_passwords: true, use_google: true, allow_remember_me: true,
@@ -26,8 +24,9 @@ name: 'MNIST '
 runtime_options:
   version: 2
   client_version: '3'
-  server_version: python3-sandbox
+  server_version: python3-full
   server_spec: {base: python310-machine-learning}
+  server_spec_disabled: {requirements: azureml.opendatasets, base: python310-machine-learning}
 metadata: {logo_img: '', title: ''}
 startup_form: Form1
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap"
