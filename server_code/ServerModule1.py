@@ -4,4 +4,9 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+import pandas as pd
+
+@anvil.server.callable
+def get_train():
+  return pd.read_csv(data_files['mnist_train.csv'])
 
