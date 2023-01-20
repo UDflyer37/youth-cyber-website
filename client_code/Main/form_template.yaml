@@ -24,35 +24,34 @@ components:
     - type: Spacer
       properties: {height: 32}
       name: spacer_5
-      layout_properties: {grid_position: 'VZSYTU,HJFXJX'}
+      layout_properties: {grid_position: 'NGCFPU,HFYOGY VZSYTU,HJFXJX'}
     - type: Spacer
       properties: {height: 73}
       name: spacer_1
-      layout_properties: {grid_position: 'NHXMYV,SDXJHH KEOHOZ,BQUSKO'}
+      layout_properties: {grid_position: 'NGCFPU,HFYOGY KEOHOZ,BQUSKO'}
     - type: Label
       properties: {role: headline, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: '', font_size: 32, font: Raleway, spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: label_2
-      layout_properties: {grid_position: 'NHXMYV,SDXJHH RQSIKH,ZITBWG'}
+      layout_properties: {grid_position: 'NGCFPU,HFYOGY RQSIKH,ZITBWG'}
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:White',
         visible: true, text: '', font_size: 18, font: '', spacing_above: small, icon_align: left,
         spacing_below: small, italic: false, background: '', bold: false, underline: false,
         icon: ''}
       name: label_3
-      layout_properties: {grid_position: 'NHXMYV,SDXJHH PMNBXG,XNXNEV'}
-    - type: Image
-      properties: {role: null, vertical_align: center, height: 281, tooltip: '', border: '',
-        foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
-        source: '', spacing_below: small, background: '', horizontal_align: center}
-      name: image_1
-      layout_properties: {grid_position: 'NHXMYV,YGCHTC'}
+      layout_properties: {grid_position: 'NGCFPU,HFYOGY PMNBXG,XNXNEV'}
     - type: Spacer
       properties: {height: 32}
       name: spacer_4
-      layout_properties: {grid_position: 'ZNSBMS,TPPYWP'}
+      layout_properties: {grid_position: 'NGCFPU,HFYOGY ZNSBMS,TPPYWP'}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
+        tooltip: '', interactive: false}
+      name: training_data_image
+      layout_properties: {grid_position: 'NGCFPU,MGHILJ'}
   - type: Spacer
     properties: {height: 64}
     name: spacer_2

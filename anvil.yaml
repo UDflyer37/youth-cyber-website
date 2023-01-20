@@ -20,84 +20,19 @@ services:
   client_config: {}
   server_config: {file_table: files}
 startup: {type: form, module: Form1}
-package_name: Webform_Template
+package_name: MNIST_
 allow_embedding: false
-name: Webform Template
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
+name: 'MNIST '
+runtime_options:
+  version: 2
+  client_version: '3'
+  server_version: python3-sandbox
+  server_spec: {base: python310-machine-learning}
 metadata: {logo_img: '', title: ''}
 startup_form: Form1
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap"
     rel="stylesheet">'}
 db_schema:
-  ratings:
-    title: Ratings
-    client: search
-    server: full
-    columns:
-    - name: options
-      admin_ui: {width: 200}
-      type: string
-    - name: num_responses
-      admin_ui: {width: 200}
-      type: number
-  age:
-    title: Age
-    client: search
-    server: full
-    columns:
-    - name: options
-      admin_ui: {width: 200}
-      type: string
-    - name: num_responses
-      admin_ui: {width: 200}
-      type: number
-  responses:
-    title: Responses
-    client: none
-    server: full
-    columns:
-    - name: age
-      admin_ui: {width: 200}
-      type: link_single
-      target: age
-    - name: frequency
-      admin_ui: {width: 200}
-      type: link_single
-      target: frequency
-    - name: method
-      admin_ui: {width: 200}
-      type: link_single
-      target: method
-    - name: rating
-      admin_ui: {width: 200}
-      type: link_single
-      target: ratings
-    - name: comments
-      admin_ui: {width: 200}
-      type: string
-  frequency:
-    title: Frequency
-    client: none
-    server: full
-    columns:
-    - name: options
-      admin_ui: {width: 200}
-      type: string
-    - name: num_responses
-      admin_ui: {width: 200}
-      type: number
-  method:
-    title: Method
-    client: none
-    server: full
-    columns:
-    - name: options
-      admin_ui: {width: 200}
-      type: string
-    - name: num_responses
-      admin_ui: {width: 200}
-      type: number
   files:
     title: Files
     client: none
