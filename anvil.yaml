@@ -1,4 +1,6 @@
-dependencies: []
+dependencies:
+- app_id: deepface
+  version: {dev: false}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
