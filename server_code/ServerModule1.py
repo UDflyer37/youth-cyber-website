@@ -8,9 +8,9 @@ import pandas as pd
 
 @anvil.server.callable
 def get_train():
-  return pd.read_csv(data_files['mnist_train.csv'])
+  return 
 
 @anvil.server.callable
 def get_test():
-  return pd.read_csv(data_files['mnist_test.csv'])
+  return 
 
