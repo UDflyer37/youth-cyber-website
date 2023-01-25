@@ -24,9 +24,9 @@ name: Face Scanner
 runtime_options:
   version: 2
   client_version: '3'
-  server_version: python3-full
-  server_spec: {base: python310-minimal}
-  server_spec_disabled: {requirements: azureml.opendatasets, base: python310-machine-learning}
+  server_version: python3-sandbox
+  server_spec: {base: python310-standard}
+  server_spec_disabled: {base: python310-standard, requirements: deepface}
 metadata: {logo_img: '', title: ''}
 startup_form: Form1
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap"
