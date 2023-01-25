@@ -5,7 +5,6 @@ unique_ids:
   modules: {}
   server_modules:
     ServerModule1: 34MDHM63KE5HM23ESOJVR2HAXJXBUFTH
-    ServerPackage1: CM3STLOD7FISLH3ISJZ4MAUCG77OLPHM
   assets:
     standard-page.html: WWBACPS33RBNCCXA2PK6WRJAU7Y52FG6
     theme.css: S7ZOHWFLVB2C34SGSIAEGGCDOE7O7PPA

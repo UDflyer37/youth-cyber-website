@@ -15,7 +15,7 @@ runtime_options:
   client_version: '3'
   server_version: python3-sandbox
   server_spec: {base: python310-standard}
-  server_spec_disabled: {base: python310-standard, requirements: deepface}
+  server_spec_disabled: {requirements: deepface==0.0.75, base: python310-standard}
 metadata: {logo_img: '', title: ''}
 startup_form: Form1
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap"
