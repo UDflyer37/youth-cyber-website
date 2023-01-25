@@ -13,7 +13,8 @@ def analyze(img):
   #calling VGGFace
   model_name = "VGG-Face"
   model = DeepFace.build_model(model_name)
-  return DeepFace.analyze(img_path = img, actions = ['age', 'gender', 'race', 'emotion'])
+  output = DeepFace.analyze(img_path = img, actions = ['age', 'gender', 'race', 'emotion'])
+  return print(obj["age"]," years old ",obj["dominant_race"])
 
 
 
