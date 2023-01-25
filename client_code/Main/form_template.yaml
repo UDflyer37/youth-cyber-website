@@ -24,34 +24,33 @@ components:
     - type: Spacer
       properties: {height: 32}
       name: spacer_5
-      layout_properties: {grid_position: 'NGCFPU,HFYOGY VZSYTU,HJFXJX'}
+      layout_properties: {grid_position: 'QDCITJ,XLEAZM VZSYTU,HJFXJX'}
     - type: Spacer
       properties: {height: 73}
       name: spacer_1
-      layout_properties: {grid_position: 'NGCFPU,HFYOGY KEOHOZ,BQUSKO'}
+      layout_properties: {grid_position: 'QDCITJ,XLEAZM KEOHOZ,BQUSKO'}
     - type: Label
       properties: {role: headline, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: '', font_size: 32, font: Raleway, spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: label_2
-      layout_properties: {grid_position: 'NGCFPU,HFYOGY RQSIKH,ZITBWG'}
+      layout_properties: {grid_position: 'QDCITJ,XLEAZM RQSIKH,ZITBWG'}
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:White',
         visible: true, text: '', font_size: 18, font: '', spacing_above: small, icon_align: left,
         spacing_below: small, italic: false, background: '', bold: false, underline: false,
         icon: ''}
       name: label_3
-      layout_properties: {grid_position: 'NGCFPU,HFYOGY PMNBXG,XNXNEV'}
+      layout_properties: {grid_position: 'QDCITJ,XLEAZM PMNBXG,XNXNEV'}
     - type: Spacer
       properties: {height: 32}
       name: spacer_4
-      layout_properties: {grid_position: 'NGCFPU,HFYOGY ZNSBMS,TPPYWP'}
-    - type: Plot
-      properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
-        tooltip: '', interactive: false}
-      name: training_data_image
-      layout_properties: {grid_position: 'NGCFPU,MGHILJ'}
+      layout_properties: {grid_position: 'QDCITJ,XLEAZM ZNSBMS,TPPYWP'}
+    - type: FileLoader
+      properties: {}
+      name: file_loader_1
+      layout_properties: {grid_position: 'QDCITJ,AFQNNP'}
   - type: Spacer
     properties: {height: 64}
     name: spacer_2
