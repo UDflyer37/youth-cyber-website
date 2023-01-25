@@ -18,9 +18,9 @@ services:
   client_config: {}
   server_config: {file_table: files}
 startup: {type: form, module: Form1}
-package_name: MNIST_
+package_name: Face_Scanner
 allow_embedding: false
-name: 'MNIST '
+name: Face Scanner
 runtime_options:
   version: 2
   client_version: '3'
