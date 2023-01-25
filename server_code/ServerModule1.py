@@ -6,12 +6,12 @@ from deepface import DeepFace
 
 
 @anvil.server.callable
-def analyze(img):
+#def analyze(img):
   #calling VGGFace
-  model_name = "VGG-Face"
-  model = DeepFace.build_model(model_name)
-  output = DeepFace.analyze(img_path = img, actions = ['age', 'gender', 'race', 'emotion'])
-  return print(obj["age"]," years old ",obj["dominant_race"])
+ # model_name = "VGG-Face"
+ # model = DeepFace.build_model(model_name)
+ # output = DeepFace.analyze(img_path = img, actions = ['age', 'gender', 'race', 'emotion'])
+ # return print(obj["age"]," years old ",obj["dominant_race"])
 
 
 
