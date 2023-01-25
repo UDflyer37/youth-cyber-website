@@ -25,7 +25,7 @@ runtime_options:
   version: 2
   client_version: '3'
   server_version: python3-full
-  server_spec: {base: python310-machine-learning}
+  server_spec: {base: python310-standard}
   server_spec_disabled: {requirements: azureml.opendatasets, base: python310-machine-learning}
 metadata: {logo_img: '', title: ''}
 startup_form: Form1

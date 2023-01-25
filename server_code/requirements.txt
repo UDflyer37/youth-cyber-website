@@ -1,2 +1,1 @@
 deepface
-deepface-cv2

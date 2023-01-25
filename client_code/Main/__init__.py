@@ -17,7 +17,6 @@ class Main(MainTemplate):
   def file_loader_1_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
     self.image_1.source = self.file_loader_1.file
-    self.label_2.text = self.image_1.source
     self.label_2.text = anvil.server.call('analyze',self.image_1.source)
     
 
