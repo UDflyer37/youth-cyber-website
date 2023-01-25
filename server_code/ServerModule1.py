@@ -5,7 +5,7 @@ import anvil.server
 from deepface import DeepFace
 
 
-@anvil.server.callable
+#@anvil.server.callable
 #def analyze(img):
   #calling VGGFace
  # model_name = "VGG-Face"
