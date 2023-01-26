@@ -17,7 +17,7 @@ components:
   name: label_1
   layout_properties: {slot: title}
 - type: ColumnPanel
-  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+  properties: {role: backgroundImage, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}', spacing_below: none,
     background: ''}
   name: content_panel
@@ -30,6 +30,8 @@ components:
     name: face_scanner
     layout_properties: {grid_position: 'CWEGCB,YYZGFG', full_width_row: false}
   - type: ColumnPanel
-    properties: {role: card}
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
+      spacing_below: small, background: ''}
     name: scratch_drawing
     layout_properties: {grid_position: 'TUXRWD,NBFAFG'}

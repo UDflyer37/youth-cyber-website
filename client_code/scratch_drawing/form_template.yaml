@@ -1,17 +1,11 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: null, html: "<style>\ndiv.image\n  {\n  width:500px;\n  height:250px;\n\
-      \  background:url(IR_Logo.png);\n  background-repeat:no-repeat;\n  background-position:center;\n\
-      \  border:2px solid;\n  border-color:#CD853F;\n  }\ndiv.transparentbox\n  {\n\
-      \  width:400px;\n  height:180px;\n  margin:30px 50px;\n  background-color:#ffffff;\n\
-      \  border:1px solid;\n  border-color:#CD853F;\n  opacity:0.6;\n  filter:alpha(opacity=60);\n\
-      \  }\ndiv.transparentbox p\n  {\n  margin:30px 40px;\n  font-weight:bold;\n\
-      \  color:#CD853F;\n  }\n</style>\n\n<center style=\"font-style:italic; color:#888;\
-      \ margin: 3em;\">\n  <div class=\"content\">\n          <div anvil-slot-repeat=\"\
-      default\" class=\"anvil-measure-this\"></div>\n          <div class=\"placeholder\
-      \ drop-here\" anvil-if-slot-empty=\"default\" anvil-drop-slot=\"default\">Drop\
-      \ a ColumnPanel here.</div>\n        \n      </div>\n  <iframe src=\"https://scratch.mit.edu/projects/787710343/embed\"\
+    role: null, html: "<center style=\"font-style:italic; color:#888; margin: 3em;\"\
+      >\n  <div class=\"content\">\n          <div anvil-slot-repeat=\"default\" class=\"\
+      anvil-measure-this\"></div>\n          <div class=\"placeholder drop-here\"\
+      \ anvil-if-slot-empty=\"default\" anvil-drop-slot=\"default\">Drop a ColumnPanel\
+      \ here.</div>\n        \n      </div>\n  <iframe src=\"https://scratch.mit.edu/projects/787710343/embed\"\
       \ allowtransparency=\"true\" width=\"485\" height=\"402\" frameborder=\"0\"\
       \ scrolling=\"no\" allowfullscreen></iframe>\n</center>"}
 components:
