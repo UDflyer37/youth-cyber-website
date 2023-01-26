@@ -6,7 +6,7 @@ roles:
 - name: input-prompt
   components: [Label]
 - name: headline
-  components: [Label]
+  components: [Label, RichText]
   displayInToolbox: true
   title: Headline
   display_in_toolbox: true

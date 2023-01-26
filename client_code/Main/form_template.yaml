@@ -21,32 +21,67 @@ components:
     name: card_1
     layout_properties: {grid_position: 'UPXRXA,CORJXQ', full_width_row: true}
     components:
-    - type: Spacer
-      properties: {height: 32}
-      name: spacer_5
-      layout_properties: {grid_position: 'QDCITJ,XLEAZM VZSYTU,HJFXJX', full_width_row: false}
-    - type: Spacer
-      properties: {height: 73}
-      name: spacer_1
-      layout_properties: {grid_position: 'QDCITJ,XLEAZM KEOHOZ,BQUSKO', full_width_row: false}
-    - type: Label
-      properties: {role: headline, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: TEST, font_size: 32, font: Raleway, spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_2
-      layout_properties: {grid_position: 'QDCITJ,XLEAZM RQSIKH,ZITBWG', full_width_row: false}
-    - type: Label
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:White',
-        visible: true, text: test, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_3
-      layout_properties: {grid_position: 'QDCITJ,XLEAZM PMNBXG,XNXNEV', full_width_row: false}
-    - type: Spacer
-      properties: {height: 32}
-      name: spacer_4
-      layout_properties: {grid_position: 'QDCITJ,XLEAZM ZNSBMS,TPPYWP', full_width_row: false}
+    - type: RichText
+      properties: {role: headline, align: center, tooltip: '', enable_slots: true,
+        border: '', foreground: '', visible: false, font_size: 20, content: '**Age:**
+          {age}
+
+          **Gender:** {gender}
+
+          **Ethnicity:** {race}
+
+          **Emotion:** {emotion}
+
+          ---
+
+          {disclaimer}', font: '', spacing_above: small, spacing_below: small, data: null,
+        background: '', format: markdown}
+      name: predictions
+      layout_properties: {grid_position: 'QDCITJ,XLEAZM'}
+      components:
+      - type: Label
+        properties: {role: headline, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: age
+        layout_properties: {grid_position: 'QDCITJ,XLEAZM AGODLA,OSBYUE', full_width_row: false,
+          slot: age}
+      - type: Label
+        properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: gender
+        layout_properties: {slot: gender}
+      - type: Label
+        properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: race
+        layout_properties: {slot: race}
+      - type: Label
+        properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: emotion
+        layout_properties: {slot: emotion}
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:White',
+          visible: true, text: The predicitons above are based on DeepFace's Neural Net Model. Any biases resulting from the model are unintended,
+          font_size: 12, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false, icon: ''}
+        name: disclaimer
+        layout_properties: {grid_position: 'QDCITJ,XLEAZM PMNBXG,XNXNEV', full_width_row: false,
+          slot: disclaimer}
+    - type: Image
+      properties: {role: null, vertical_align: center, height: '200', tooltip: '',
+        border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+        source: '', spacing_below: small, background: '', horizontal_align: center}
+      name: image_1
+      layout_properties: {grid_position: 'QDCITJ,QSRIGY XZWHAE,LQDOGD'}
     - type: FileLoader
       properties:
         role: primary-color
@@ -73,14 +108,8 @@ components:
         multiple: false
         icon: fa:upload
       name: file_loader_1
-      layout_properties: {grid_position: 'QDCITJ,QSRIGY URICQL,YNUPDP', full_width_row: false}
+      layout_properties: {grid_position: 'QDCITJ,QSRIGY MZNBPX,JGDOGN', full_width_row: false}
       event_bindings: {change: file_loader_1_change}
-    - type: Image
-      properties: {role: null, vertical_align: center, height: '200', tooltip: '',
-        border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
-        source: '', spacing_below: small, background: '', horizontal_align: center}
-      name: image_1
-      layout_properties: {grid_position: 'QDCITJ,QSRIGY XZWHAE,LQDOGD'}
   - type: Spacer
     properties: {height: 64}
     name: spacer_2
