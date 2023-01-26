@@ -1,5 +1,35 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" rel="preload" as="font" crossorigin="anonymous">
 
+<style>
+div.image
+  {
+  width:500px;
+  height:250px;
+  background:url(IR_Logo.png);
+  background-repeat:no-repeat;
+  background-position:center;
+  border:2px solid;
+  border-color:#CD853F;
+  }
+div.transparentbox
+  {
+  width:400px;
+  height:180px;
+  margin:30px 50px;
+  background-color:#ffffff;
+  border:1px solid;
+  border-color:#CD853F;
+  opacity:0.6;
+  filter:alpha(opacity=60);
+  }
+div.transparentbox p
+  {
+  margin:30px 40px;
+  font-weight:bold;
+  color:#CD853F;
+  }
+</style>
+
 <div class="structure">
   <div class="app-bar" anvil-drop-container=".anvil-container" anvil-drop-redirect=".placeholder">
     <a class="sidebar-toggle" anvil-if-slot-empty="top-left-btn" anvil-hide-if-slot-empty="left-nav" anvil-drop-slot="top-left-btn" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
@@ -24,6 +54,7 @@
     <div class="content">
       <div anvil-slot-repeat="default" class="anvil-measure-this"></div>
       <div class="placeholder drop-here" anvil-if-slot-empty="default" anvil-drop-slot="default">Drop a ColumnPanel here.</div>
+      
     </div>
   </div>
   <div class="nav-shield"></div>

@@ -19,7 +19,9 @@ runtime_options:
 metadata: {logo_img: '', title: ''}
 startup_form: Form1
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap"
-    rel="stylesheet">'}
+    rel="stylesheet">
+
+    '}
 db_schema:
   files:
     title: Files
