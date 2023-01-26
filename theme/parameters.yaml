@@ -11,7 +11,7 @@ roles:
   title: Headline
   display_in_toolbox: true
 - name: display-4
-  components: [Label]
+  components: [Label, Link]
 - name: card
   components: [ColumnPanel, LinearPanel, XYPanel, RepeatingPanel]
   displayInToolbox: true

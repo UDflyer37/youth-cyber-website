@@ -5,21 +5,21 @@ container:
       >\n  <div class=\"content\">\n          <div anvil-slot-repeat=\"default\" class=\"\
       anvil-measure-this\"></div>\n          <div class=\"placeholder drop-here\"\
       \ anvil-if-slot-empty=\"default\" anvil-drop-slot=\"default\">Drop a ColumnPanel\
-      \ here.</div>\n        \n      </div>\n  <iframe src=\"https://scratch.mit.edu/projects/787710343/embed\"\
+      \ here.</div>\n        \n      </div>\n  <iframe src=\"https://scratch.mit.edu/projects/793953099/embed\"\
       \ allowtransparency=\"true\" width=\"485\" height=\"402\" frameborder=\"0\"\
       \ scrolling=\"no\" allowfullscreen></iframe>\n</center>"}
 components:
-- type: Label
-  properties: {role: display-4, align: center, tooltip: '', border: '', foreground: 'theme:Primary
-      500', visible: true, text: 'MADIO X-TREME!
-
-      ', font_size: 50, font: '', spacing_above: small, icon_align: left, spacing_below: none,
-    italic: false, background: '', bold: false, underline: false, icon: ''}
-  name: label_1
+- type: Link
+  properties: {role: display-4, url: 'https://scratch.mit.edu/projects/793953099',
+    align: center, tooltip: '', border: '', foreground: 'theme:Primary 500', visible: true,
+    text: Squawky Bird!, font_size: 65, wrap_on: mobile, font: '', col_spacing: medium,
+    spacing_above: small, icon_align: left, col_widths: '', spacing_below: none, italic: false,
+    background: '', bold: false, underline: false, icon: ''}
+  name: link_1
   layout_properties: {slot: default}
 - type: Label
   properties: {role: headline, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'made by: John Smith', font_size: null, font: '', spacing_above: none,
+    visible: true, text: 'made by: Alexander Otto', font_size: null, font: '', spacing_above: none,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
     underline: false, icon: ''}
   name: label_2
