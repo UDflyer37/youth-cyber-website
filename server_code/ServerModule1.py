@@ -7,7 +7,6 @@ import cv2
 from deepface import DeepFace
 
 
-
 @anvil.server.callable
 def analyze(file):
   #calling model to use for predictions
