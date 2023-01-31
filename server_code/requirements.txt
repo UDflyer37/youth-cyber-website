@@ -1,4 +1,3 @@
 opencv-python-headless
 opencv-python
 deepface==0.0.78
-cv2
