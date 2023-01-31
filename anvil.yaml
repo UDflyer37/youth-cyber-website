@@ -1,4 +1,6 @@
-dependencies: []
+dependencies:
+- app_id: TBMHGP3ZZWNI7Z3T
+  version: {dev: false}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
