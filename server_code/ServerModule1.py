@@ -3,11 +3,10 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 import anvil.media
-import cv2
-from deepface import DeepFace
+#from deepface import DeepFace
 
 
-@anvil.server.callable
+#@anvil.server.callable
 def analyze(file):
   #calling model to use for predictions
   models = ["VGG-Face", "Facenet", "Facenet512", "OpenFace", "DeepFace", "DeepID", "ArcFace", "SFace"]

@@ -1,2 +1,4 @@
+ws4py
+argparse
+opencv-python
 deepface
-opencv-python==4.5.5.64
