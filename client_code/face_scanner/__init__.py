@@ -16,7 +16,7 @@ class face_scanner(face_scannerTemplate):
     """This method is called when a new file is loaded into this FileLoader"""
     self.image_1.source = self.file_loader_1.file
     self.image_1.visible = True
-    age, gender, race, emotion = anvil.server.call('analyze', file)
+    age, gender, race, emotion = anvil.server.call('face', file)
     self.age.text = age
     self.race.text = race
     self.gender.text = gender

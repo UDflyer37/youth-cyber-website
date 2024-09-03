@@ -1,147 +1,121 @@
-container:
-  type: ColumnPanel
-  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}', spacing_below: none,
-    background: 'theme:Primary 500'}
 components:
-- type: Spacer
-  properties: {height: 32}
+- layout_properties: {grid_position: 'BCIYEK,KYFUER'}
   name: spacer_3
-  layout_properties: {grid_position: 'BCIYEK,KYFUER'}
-- type: Label
-  properties: {role: display-4, align: center, tooltip: '', border: '', foreground: 'theme:White',
-    visible: true, text: Face Scanner, font_size: 60, font: '', spacing_above: small,
-    icon_align: left, spacing_below: none, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
+  properties: {height: 32}
+  type: Spacer
+- layout_properties: {grid_position: 'TIOYUE,EUWPDT'}
   name: label_1
-  layout_properties: {grid_position: 'TIOYUE,EUWPDT'}
-- type: Label
-  properties: {role: headline, align: center, tooltip: '', border: '', foreground: 'theme:White',
-    visible: true, text: 'made by: Alexander Otto', font_size: null, font: '', spacing_above: none,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
+  properties: {align: center, background: '', bold: true, border: '', font: '', font_size: 60, foreground: 'theme:White', icon: '', icon_align: left, italic: false, role: display-4, spacing_above: small, spacing_below: none, text: Face Scanner, tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {grid_position: 'ZALMKA,FXSMIU'}
   name: label_2
-  layout_properties: {grid_position: 'ZALMKA,FXSMIU'}
-- type: ColumnPanel
-  properties: {role: null, tooltip: '', border: '', foreground: 'theme:White', visible: true,
-    wrap_on: mobile, col_spacing: none, spacing_above: none, col_widths: '{}', spacing_below: none,
-    background: 'theme:Primary 500'}
-  name: content_panel
-  layout_properties:
-    col_widths: {}
-    grid_position: RXJHHL,CSQTBO
-    full_width_row: true
-  components:
-  - type: ColumnPanel
-    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}',
-      spacing_below: none, background: 'theme:Primary 500'}
-    name: card_1
-    layout_properties: {grid_position: 'JMPUZM,LNPPXK', full_width_row: true}
-    components:
-    - type: RichText
-      properties: {role: headline, align: center, tooltip: '', enable_slots: true,
-        border: '', foreground: '', visible: false, font_size: 20, content: '**Age:**
-          {age}
-
-          **Gender:** {gender}
-
-          **Ethnicity:** {race}
-
-          **Emotion:** {emotion}
-
-          ***
-
-          {disclaimer}', font: '', spacing_above: small, spacing_below: small, data: null,
-        background: '', format: markdown}
-      name: predictions
-      layout_properties: {grid_position: 'AFFRIN,BRKHKQ'}
-      components:
-      - type: Label
-        properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: 30, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
+  properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:White', icon: '', icon_align: left, italic: false, role: headline, spacing_above: none, spacing_below: small, text: Learn how AI/ML can recognize images!, tooltip: '', underline: false, visible: true}
+  type: Label
+- components:
+  - components:
+    - components:
+      - layout_properties: {slot: gender}
         name: gender
-        layout_properties: {slot: gender}
-      - type: Label
-        properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: 30, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
+        properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 30, foreground: '', icon: '', icon_align: left, italic: false, role: headline, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+        type: Label
+      - layout_properties: {slot: race}
         name: race
-        layout_properties: {slot: race}
-      - type: Label
-        properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: 30, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
+        properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 30, foreground: '', icon: '', icon_align: left, italic: false, role: headline, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+        type: Label
+      - layout_properties: {slot: emotion}
         name: emotion
-        layout_properties: {slot: emotion}
-      - type: Label
-        properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:White',
-          visible: true, text: The predicitons above are based on DeepFace's Neural Net Model. Any biases resulting from the model are unintended,
-          font_size: 12, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false, icon: ''}
+        properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 30, foreground: '', icon: '', icon_align: left, italic: false, role: headline, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+        type: Label
+      - layout_properties: {full_width_row: false, grid_position: 'QDCITJ,XLEAZM PMNBXG,XNXNEV', slot: disclaimer}
         name: disclaimer
-        layout_properties: {grid_position: 'QDCITJ,XLEAZM PMNBXG,XNXNEV', full_width_row: false,
-          slot: disclaimer}
-      - type: Label
-        properties: {role: headline, align: center, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: 30, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
+        properties: {align: center, background: '', bold: false, border: '', font: '', font_size: 12, foreground: 'theme:White', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: The predicitons above are based on DeepFace's Neural Net Model. Any biases resulting from the model are unintended, tooltip: '', underline: false, visible: true}
+        type: Label
+      - layout_properties: {full_width_row: false, grid_position: 'QDCITJ,XLEAZM AGODLA,OSBYUE', slot: age}
         name: age
-        layout_properties: {grid_position: 'QDCITJ,XLEAZM AGODLA,OSBYUE', full_width_row: false,
-          slot: age}
-    - type: Spacer
-      properties: {height: 32}
+        properties: {align: center, background: '', bold: false, border: '', font: '', font_size: 30, foreground: '', icon: '', icon_align: left, italic: false, role: headline, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+        type: Label
+      layout_properties: {grid_position: 'AFFRIN,BRKHKQ'}
+      name: predictions
+      properties:
+        align: center
+        background: ''
+        border: ''
+        content: |-
+          **Age:** {age}
+          **Gender:** {gender}
+          **Ethnicity:** {race}
+          **Emotion:** {emotion}
+          ***
+          {disclaimer}
+        data: null
+        enable_slots: true
+        font: ''
+        font_size: 20
+        foreground: ''
+        format: markdown
+        role: headline
+        spacing_above: small
+        spacing_below: small
+        tooltip: ''
+        visible: false
+      type: RichText
+    - layout_properties: {grid_position: 'HGNGXM,TEGUBJ'}
       name: spacer_1
-      layout_properties: {grid_position: 'HGNGXM,TEGUBJ'}
-    - type: ColumnPanel
-      properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: ''}
-      name: card_2
-      layout_properties: {grid_position: 'AGQRKC,TTSRQY'}
-      components:
-      - type: Image
-        properties: {role: null, vertical_align: center, height: '200', tooltip: '',
-          border: '', foreground: '', visible: false, display_mode: shrink_to_fit,
-          spacing_above: small, source: '', spacing_below: small, background: '',
-          horizontal_align: center}
+      properties: {height: 32}
+      type: Spacer
+    - components:
+      - layout_properties: {grid_position: 'BAZUVT,TJNEJV'}
         name: image_1
-        layout_properties: {grid_position: 'BAZUVT,TJNEJV'}
-      - type: FileLoader
+        properties: {background: '', border: '', display_mode: shrink_to_fit, foreground: '', height: '200', horizontal_align: center, role: null, source: '', spacing_above: small, spacing_below: small, tooltip: '', vertical_align: center, visible: false}
+        type: Image
+      - event_bindings: {change: file_loader_1_change}
+        layout_properties: {full_width_row: false, grid_position: 'FRXMXK,HJPAOC'}
+        name: file_loader_1
         properties:
-          role: raised
-          show_state: false
           align: center
-          tooltip: ''
-          border: ''
-          file_types: ''
-          enabled: true
-          files: []
-          foreground: ''
-          visible: true
-          text: Upload
-          font_size: null
-          font: ''
-          spacing_above: small
-          icon_align: left
-          spacing_below: small
-          italic: false
-          file: null
           background: theme:White
           bold: false
-          underline: false
-          multiple: false
+          border: ''
+          enabled: true
+          file: null
+          file_types: ''
+          files: []
+          font: ''
+          font_size: null
+          foreground: ''
           icon: fa:upload
-        name: file_loader_1
-        layout_properties: {grid_position: 'FRXMXK,HJPAOC', full_width_row: false}
-        event_bindings: {change: file_loader_1_change}
-    - type: Spacer
-      properties: {height: 32}
+          icon_align: left
+          italic: false
+          multiple: false
+          role: raised
+          show_state: false
+          spacing_above: small
+          spacing_below: small
+          text: Upload
+          tooltip: ''
+          underline: false
+          visible: true
+        type: FileLoader
+      layout_properties: {grid_position: 'AGQRKC,TTSRQY'}
+      name: card_2
+      properties: {background: '', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+      type: ColumnPanel
+    - layout_properties: {grid_position: 'QBFKYW,MSBMTD'}
       name: spacer_2
-      layout_properties: {grid_position: 'QBFKYW,MSBMTD'}
+      properties: {height: 32}
+      type: Spacer
+    layout_properties: {full_width_row: true, grid_position: 'JMPUZM,LNPPXK'}
+    name: card_1
+    properties: {background: 'theme:Primary 500', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: null, spacing_above: none, spacing_below: none, tooltip: '', visible: true, wrap_on: mobile}
+    type: ColumnPanel
+  layout_properties:
+    col_widths: {}
+    full_width_row: true
+    grid_position: RXJHHL,CSQTBO
+  name: content_panel
+  properties: {background: 'theme:Primary 500', border: '', col_spacing: none, col_widths: '{}', foreground: 'theme:White', role: null, spacing_above: none, spacing_below: none, tooltip: '', visible: true, wrap_on: mobile}
+  type: ColumnPanel
+container:
+  properties: {background: 'theme:Primary 500', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: null, spacing_above: none, spacing_below: none, tooltip: '', visible: true, wrap_on: mobile}
+  type: ColumnPanel
 is_package: true

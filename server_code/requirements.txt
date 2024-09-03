@@ -2,3 +2,4 @@ ws4py
 argparse
 opencv-python
 deepface
+opencv-python-headless

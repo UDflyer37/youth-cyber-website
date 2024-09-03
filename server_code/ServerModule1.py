@@ -6,8 +6,8 @@ import anvil.media
 #from deepface import DeepFace
 
 
-#@anvil.server.callable
-def analyze(file):
+@anvil.server.callable
+def face(file):
   #calling model to use for predictions
   models = ["VGG-Face", "Facenet", "Facenet512", "OpenFace", "DeepFace", "DeepID", "ArcFace", "SFace"]
   model_name = models[7]

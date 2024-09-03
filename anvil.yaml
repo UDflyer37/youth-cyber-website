@@ -1,41 +1,40 @@
-dependencies: []
-services:
-- source: /runtime/services/tables.yml
-  client_config: {}
-  server_config: {}
-- source: /runtime/services/anvil/files.yml
-  client_config: {}
-  server_config: {file_table: files}
-startup: {type: form, module: Form1}
-package_name: Indian_River_MS_After_School_Program_Projects
 allow_embedding: false
-name: Indian River MS After School Program Projects
-runtime_options:
-  version: 2
-  client_version: '3'
-  server_version: python3-sandbox
-  server_spec: {base: python310-machine-learning}
-  server_spec_disabled: {base: python310-standard, requirements: deepface}
-metadata: {logo_img: 'asset:IR_Logo.png', title: AYPYN}
-startup_form: Form1
-native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap"
-    rel="stylesheet">
-
-    '}
 db_schema:
   files:
-    title: Files
     client: none
-    server: full
     columns:
-    - name: path
-      admin_ui: {width: 200}
+    - admin_ui: {width: 200}
+      name: path
       type: string
-    - name: file
-      admin_ui: {width: 200}
+    - admin_ui: {width: 200}
+      name: file
       type: media
-    - name: file_version
-      admin_ui: {width: 200}
+    - admin_ui: {width: 200}
+      name: file_version
       type: string
-uplink_visible: true
+    server: full
+    title: Files
+dependencies: []
+metadata: {logo_img: 'asset:IR_Logo.png', title: AYPYN}
+name: Indian River MS After School Program Projects
+native_deps:
+  head_html: |
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+package_name: Indian_River_MS_After_School_Program_Projects
 renamed: true
+runtime_options:
+  client_version: '3'
+  server_spec: {base: python310-machine-learning}
+  server_spec_disabled: {base: python310-standard, requirements: deepface}
+  server_version: python3-sandbox
+  version: 2
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
+- client_config: {}
+  server_config: {file_table: files}
+  source: /runtime/services/anvil/files.yml
+startup: {module: Form1, type: form}
+startup_form: Form1
+uplink_visible: true

@@ -1,27 +1,20 @@
-container:
-  type: HtmlTemplate
-  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: null, html: "<center style=\"font-style:italic; color:#888; margin: 3em;\"\
-      >\n  <div class=\"content\">\n          <div anvil-slot-repeat=\"default\" class=\"\
-      anvil-measure-this\"></div>\n          <div class=\"placeholder drop-here\"\
-      \ anvil-if-slot-empty=\"default\" anvil-drop-slot=\"default\">Drop a ColumnPanel\
-      \ here.</div>\n        \n      </div>\n  <iframe src=\"https://scratch.mit.edu/projects/793953099/embed\"\
-      \ allowtransparency=\"true\" width=\"485\" height=\"402\" frameborder=\"0\"\
-      \ scrolling=\"no\" allowfullscreen></iframe>\n</center>"}
 components:
-- type: Link
-  properties: {role: display-4, url: 'https://scratch.mit.edu/projects/793953099',
-    align: center, tooltip: '', border: '', foreground: 'theme:Primary 500', visible: true,
-    text: Squawky Bird!, font_size: 65, wrap_on: mobile, font: '', col_spacing: medium,
-    spacing_above: small, icon_align: left, col_widths: '', spacing_below: none, italic: false,
-    background: '', bold: false, underline: false, icon: ''}
+- layout_properties: {slot: default}
   name: link_1
-  layout_properties: {slot: default}
-- type: Label
-  properties: {role: headline, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'made by: Alexander Otto', font_size: null, font: '', spacing_above: none,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
+  properties: {align: center, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 65, foreground: 'theme:Primary 500', icon: '', icon_align: left, italic: false, role: display-4, spacing_above: small, spacing_below: none, text: Squawky Bird!, tooltip: '', underline: false, url: 'https://scratch.mit.edu/projects/793953099', visible: true, wrap_on: mobile}
+  type: Link
+- layout_properties: {slot: default}
   name: label_2
-  layout_properties: {slot: default}
+  properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: headline, spacing_above: none, spacing_below: small, text: 'Learn how to embed programs into a website! Create your own simple game on: https://scratch.mit.edu/', tooltip: '', underline: false, visible: true}
+  type: Label
+container:
+  properties:
+    background: ''
+    border: ''
+    foreground: ''
+    html: "<center style=\"font-style:italic; color:#888; margin: 3em;\">\n  <div class=\"content\">\n          <div anvil-slot-repeat=\"default\" class=\"anvil-measure-this\"></div>\n          <div class=\"placeholder drop-here\" anvil-if-slot-empty=\"default\" anvil-drop-slot=\"default\">Drop a ColumnPanel here.</div>\n        \n      </div>\n  <iframe src=\"https://scratch.mit.edu/projects/793953099/embed\" allowtransparency=\"true\" width=\"485\" height=\"402\" frameborder=\"0\" scrolling=\"no\" allowfullscreen></iframe>\n</center>"
+    role: null
+    tooltip: ''
+    visible: true
+  type: HtmlTemplate
 is_package: true
