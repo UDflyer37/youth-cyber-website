@@ -1,0 +1,1084 @@
+<html><head><base href="https://cyberkids.afterschool.anvil.app/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberKids: Cyber Adventure Playground</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;700&display=swap');
+
+  :root {
+    --primary: #FF6B6B;
+    --secondary: #4ECDC4;
+    --accent1: #FFD93D;
+    --accent2: #6E44FF;
+    --background: #F7FFF7;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: #333;
+    overflow-x: hidden;
+  }
+
+  header {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+  }
+
+  header h1 {
+    font-size: 5rem;
+    margin: 2;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-5px) rotate(5deg); }
+  }
+
+  @keyframes navBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  nav {
+    background: linear-gradient(90deg, var(--secondary), var(--accent2));
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin: 0.5rem;
+    animation: navBounce 1s ease-in-out;
+    animation-fill-mode: both;
+  }
+
+  nav ul li:nth-child(1) { animation-delay: 0.1s; }
+  nav ul li:nth-child(2) { animation-delay: 0.2s; }
+  nav ul li:nth-child(3) { animation-delay: 0.3s; }
+  nav ul li:nth-child(4) { animation-delay: 0.4s; }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  nav ul li a:hover {
+    background-color: var(--accent1);
+    color: #333;
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  nav ul li a i {
+    font-size: 1.2rem;
+  }
+
+  .cyber-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .cyber-particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: float 5s infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(10px, 10px); }
+    50% { transform: translate(20px, 0); }
+    75% { transform: translate(10px, -10px); }
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .project-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .scratch-carousel {
+    width: 100%;
+    max-width: 485px;
+    height: 402px;
+    position: relative;
+    perspective: 1000px;
+    margin: 0 auto;
+  }
+
+  .scratch-carousel-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+
+  .scratch-carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .scratch-carousel-item iframe {
+    width: 100%;
+    height: 100%;
+    max-width: 70%; 
+    max-height: 70%; 
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .scratch-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .scratch-nav button {
+    margin: 0 10px;
+  }
+
+  .ai-demo {
+    background-color: var(--accent1);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-demo::after {
+    content: 'AI';
+    font-size: 10rem;
+    position: absolute;
+    bottom: -35px;
+    right: -5px;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+  }
+
+  #videoElement {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+  }
+
+  #canvas {
+    display: block;
+    margin: 20px auto;
+    max-width: 640px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  #drawCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    z-index: 1;
+  }
+
+  #result {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--accent2);
+    text-shadow: 1px 1px 0 white;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .fun-button {
+    background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent1), var(--accent2));
+    background-size: 300% 300%;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: gradientBG 5s ease infinite;
+  }
+  
+  #safe-button {
+    background: green;
+    color: white; /* White text for contrast */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #dangerous-button {
+    background: red;
+    color: white; /* White text for contrast */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #safe-button:hover {
+    background: darkgreen;
+  }
+  
+  #dangerous-button:hover {
+    background: darkred;
+  }
+
+  .fun-button:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  #password-input, #message-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid var(--accent2);
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  .password-input-container, .input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  #password-input {
+    flex-grow: 1;
+  }
+
+  #toggle-password {
+    margin-left: 10px;
+    padding: 5px 10px;
+  }
+
+  #password-recommendations {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  #password-recommendations ul {
+    padding-left: 20px;
+  }
+
+  #password-recommendations li {
+    margin-bottom: 5px;
+  }
+
+  #password-result, #encrypted-message {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .project-card {
+    margin-bottom: 20px;
+  }
+
+  .scratch-showcase {
+    width: 100%;
+    max-width: 100%;
+    background: linear-gradient(135deg, var(--accent1), var(--accent2));
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .scratch-showcase:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .scratch-showcase h3 {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+  }
+
+  .scratch-showcase p {
+    color: white;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .scratch-nav button {
+    background-color: white;
+    color: var(--accent2);
+    border: 2px solid var(--accent2);
+    padding: 10px 20px;
+    margin: 1rem 5px 0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+
+  .scratch-nav button:hover {
+    background-color: var(--accent2);
+    color: white;
+    transform: scale(1.05);
+  }
+
+  .canvas-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .drawing-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #colorPicker {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  #brushSize {
+    width: 100px;
+  }
+
+  #network-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background-color: #f0f0f0;
+    border: 2px solid var(--accent2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  #networkCanvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  #stop-game {
+    margin-left: 10px;
+  }
+
+  .game-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    z-index: 10;
+  }
+
+  #videoElement, #canvas, #drawCanvas, .drawing-controls {
+    display: none;
+  }
+
+  #phishing-game {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  #game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  #message-container {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    min-height: 100px;
+    position: relative;
+  }
+
+  #game-controls {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+  }
+
+  .feedback-correct, .feedback-incorrect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .feedback-correct {
+    background-color: green;
+  }
+
+  .feedback-incorrect {
+    background-color: red;
+  }
+
+  #timer {
+    color: #F44336;
+  }
+
+  #score, #feedback {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #feedback {
+    margin-top: 10px;
+    min-height: 20px;
+  }
+  
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+  <header>
+    <section id="home">
+      <div class="cyber-particles"></div>
+      <h1>Indian River Middle School After School Program:</h1>
+      <h2>Cyber Adventure Playground</h2>
+    </section>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#home"><i class="fas fa-home"></i> Home Base</a></li>
+      <li><a href="#projects"><i class="fas fa-rocket"></i> Cyber Missions</a></li>
+      <li><a href="#ai-demo"><i class="fas fa-robot"></i> AI Magic</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Welcome to the Cyber Playground!</h2>
+    <p>Embark on an exciting journey through the digital realm! Become a cyber hero, solve puzzles, and learn amazing tech knowledge along the way!</p>
+    <section id="projects">
+      <h2>Cyber Missions Await!</h2>
+      <div class="project-grid">
+        <div class="project-card scratch-showcase">
+          <h3>Scratch Game Showcase</h3>
+          <div class="scratch-carousel">
+            <div class="scratch-carousel-inner">
+              <div class="scratch-carousel-item">
+                <iframe src="https://scratch.mit.edu/projects/793953099/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+              </div>
+              <div class="scratch-carousel-item">
+                <iframe src="https://scratch.mit.edu/projects/793953099/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+              </div>
+              <div class="scratch-carousel-item">
+                <iframe src="https://scratch.mit.edu/projects/793953099/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="scratch-nav">
+            <button onclick="changeProject(-1)" class="fun-button">Previous</button>
+            <button onclick="changeProject(1)" class="fun-button">Next</button>
+          </div>
+          <h3>Check out these amazing Scratch projects created by CyberKids! Go to scratch.mit.edu to create your own cyber-themed game and be featured here!</h3>
+        </div>
+        <div class="project-card">
+          <h3>Password Power-Up Challenge</h3>
+          <p>Transform weak passwords into unbreakable fortresses! Test your password strength and learn the secrets of cyber protection.</p>
+          <div class="password-input-container">
+            <input type="password" id="password-input" placeholder="Enter your password">
+            <button id="toggle-password" class="fun-button"><i class="fas fa-eye"></i></button>
+          </div>
+          <button onclick="checkPassword()" class="fun-button">Check Strength</button>
+          <div id="password-result"></div>
+          <div id="password-recommendations"></div>
+        </div>
+        <div class="project-card">
+          <h3>Code Breaker Academy</h3>
+          <p>Unravel the mysteries of encryption! Send secret messages to your friends and challenge them to crack your code.</p>
+          <div class="input-container">
+            <input type="text" id="message-input" placeholder="Enter your message">
+            <button onclick="encryptMessage()" class="fun-button">Encrypt</button>
+          </div>
+          <div id="encrypted-message"></div>
+        </div>
+        <div class="project-card">
+          <h3>Phishing Defender Challenge</h3>
+          <p>Protect yourself from harmful links and phishing attempts! Can you identify the safe and dangerous messages?</p>
+          <button id="start-phishing-game" class="fun-button">Start Phishing Defender Game</button>
+          <div id="phishing-game" style="display: none;">
+            <div id="game-info">
+              <span id="level">Level: 1</span>
+              <span id="score">Score: 0</span>
+              <span id="timer">Time left: 10s</span>
+            </div>
+            <div id="message-container"></div>
+            <div id="game-controls">
+              <button id="safe-button" class="fun-button">Safe</button>
+              <button id="dangerous-button" class="fun-button">Dangerous</button>
+              <button id="stop-game" class="fun-button">Stop Game</button>
+            </div>
+            <p id="feedback"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="ai-demo" class="ai-demo">
+      <h2>AI Face Detection Magic!</h2>
+      <p>Witness the power of artificial intelligence! Our AI wizard will track your face in real-time. You can even draw on the top canvas and it will follow your face! Are you ready to be amazed?</p>
+      <button id="startAI" class="fun-button">Start AI Face Detection</button>
+      <div class="canvas-container">
+        <video id="videoElement" autoplay playsinline></video>
+        <canvas id="canvas"></canvas>
+        <canvas id="drawCanvas"></canvas>
+      </div>
+      <div class="drawing-controls">
+        <button id="clearDrawing" class="fun-button">Clear Drawing</button>
+        <input type="color" id="colorPicker" value="#FF0000">
+        <button id="eraserTool" class="fun-button">Eraser</button>
+        <input type="range" id="brushSize" min="1" max="20" value="10">
+      </div>
+      <div id="result"></div>
+    </section>
+  </main>
+  <script>
+    let timeLeft = 10;
+    let timer;
+    let currentLevel = 1;
+    let questionsAnswered = 0;
+    let score = 0;
+
+    const messages = [
+      { text: "Congratulations! You've won a free iPhone. Click here to claim your prize!", safe: false },
+      { text: "Your account has been locked. Please click this link to verify your identity.", safe: false },
+      { text: "Hi, this is your friend. I found this cool website you might like: www.totallylegit.com", safe: false },
+      { text: "Your order #12345 has been shipped. Track your package here: https://legitshipping.com/track", safe: true },
+      { text: "Welcome to our newsletter! Click here to unsubscribe if you no longer wish to receive emails.", safe: true },
+      { text: "Security alert: Your password was recently changed. If this wasn't you, please contact support.", safe: true },
+      { text: "URGENT: Transfer money now to claim your inheritance from a long-lost relative!", safe: false },
+      { text: "Your favorite online store is having a sale. Shop now at our official website.", safe: true },
+      { text: "You've been selected for a exclusive job opportunity. Send us your personal details to apply.", safe: false },
+      { text: "Your subscription is expiring soon. Renew now to avoid service interruption.", safe: true },
+      { text: "You have a new message from your bank. Log in to view: http://totallynotafakebank.com", safe: false },
+      { text: "Your social media account has been compromised. Reset your password here: www.definitelyrealsocialmedia.com", safe: false },
+      { text: "Congratulations! You're our 1,000,000th visitor. Claim your prize now!", safe: false },
+      { text: "Your computer has a virus! Download our antivirus software immediately: www.notascam.com", safe: false },
+      { text: "Your package couldn't be delivered. Click here to reschedule: https://legitimateshippingcompany.com/reschedule", safe: true }
+    ];
+
+    function startGame() {
+      score = 0;
+      questionsAnswered = 0;
+      currentLevel = 1;
+      updateScore();
+      showNextMessage();
+      startButton.style.display = 'none';
+      phishingGame.style.display = 'block';
+      safeButton.disabled = false;
+      dangerousButton.disabled = false;
+      stopButton.style.display = 'inline-block';
+      startTimer();
+    }
+
+    function stopGame() {
+      clearInterval(timer);
+      endGame();
+    }
+
+    function endGame() {
+      clearInterval(timer);
+      messageContainer.textContent = `Game Over! Final Score: ${score} / ${questionsAnswered}`;
+      safeButton.disabled = true;
+      dangerousButton.disabled = true;
+      startButton.style.display = 'inline-block';
+      startButton.textContent = 'Play Again';
+      stopButton.style.display = 'none';
+    }
+
+    function showNextMessage() {
+      const message = messages[Math.floor(Math.random() * messages.length)];
+      messageContainer.textContent = message.text;
+      messageContainer.dataset.safe = message.safe;
+      timeLeft = 10;
+      updateTimer();
+    }
+
+    function checkAnswer(userAnswer) {
+      const isCorrect = (userAnswer === (messageContainer.dataset.safe === 'true'));
+      questionsAnswered++;
+      if (isCorrect) {
+        score++;
+        showFeedback(true);
+      } else {
+        showFeedback(false);
+      }
+      updateScore();
+      setTimeout(() => {
+        showNextMessage();
+        clearInterval(timer);
+        startTimer();
+      }, 1500);
+    }
+
+    function showFeedback(isCorrect) {
+      const feedback = document.createElement('div');
+      feedback.textContent = isCorrect ? 'Correct!' : 'Incorrect!';
+      feedback.className = isCorrect ? 'feedback-correct' : 'feedback-incorrect';
+      messageContainer.appendChild(feedback);
+      setTimeout(() => feedback.remove(), 1500);
+    }
+
+    function updateScore() {
+      scoreDisplay.textContent = `Score: ${score} / ${questionsAnswered}`;
+      document.getElementById('level').textContent = `Level: ${currentLevel}`;
+    }
+
+    function startTimer() {
+      timer = setInterval(() => {
+        timeLeft--;
+        updateTimer();
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          endGame();
+        }
+      }, 1000);
+    }
+
+    function updateTimer() {
+      document.getElementById('timer').textContent = `Time left: ${timeLeft}s`;
+    }
+
+    const stopButton = document.getElementById('stop-game');
+    stopButton.addEventListener('click', stopGame);
+
+    const messageContainer = document.getElementById('message-container');
+    const safeButton = document.getElementById('safe-button');
+    const dangerousButton = document.getElementById('dangerous-button');
+    const scoreDisplay = document.getElementById('score');
+    const feedbackDisplay = document.getElementById('feedback');
+    const startButton = document.getElementById('start-phishing-game');
+
+    safeButton.addEventListener('click', () => checkAnswer(true));
+    dangerousButton.addEventListener('click', () => checkAnswer(false));
+    startButton.addEventListener('click', startGame);
+
+    const phishingGame = document.getElementById('phishing-game');
+    phishingGame.style.display = 'none';
+
+    const particlesContainer = document.querySelector('.cyber-particles');
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('cyber-particle');
+      particle.style.width = `${Math.random() * 10 + 5}px`;
+      particle.style.height = particle.style.width;
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+      particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
+      particle.style.animationDelay = `${Math.random() * 5}s`;
+      particlesContainer.appendChild(particle);
+    }
+
+    const video = document.getElementById('videoElement');
+    const canvas = document.getElementById('canvas');
+    const drawCanvas = document.getElementById('drawCanvas');
+    const ctx = canvas.getContext('2d');
+    const drawCtx = drawCanvas.getContext('2d');
+    const resultDiv = document.getElementById('result');
+
+    let model;
+    let lastColor = '#FF0000';
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
+    let currentColor = '#FF0000';
+    let currentLineWidth = 5;
+    let isErasing = false;
+
+    async function setupCamera() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+        video.srcObject = stream;
+        return new Promise((resolve) => {
+          video.onloadedmetadata = () => {
+            resolve(video);
+          };
+        });
+      } catch (error) {
+        console.error('Error accessing camera:', error);
+        throw new Error('Unable to access the camera. Please make sure it\'s connected and you\'ve granted permission.');
+      }
+    }
+
+    async function loadModels() {
+      model = await blazeface.load();
+    }
+
+    async function main() {
+      const startButton = document.getElementById('startAI');
+      const videoElement = document.getElementById('videoElement');
+      const canvas = document.getElementById('canvas');
+      const drawCanvas = document.getElementById('drawCanvas');
+      const drawingControls = document.querySelector('.drawing-controls');
+
+      startButton.addEventListener('click', async () => {
+        startButton.disabled = true;
+        startButton.textContent = 'Loading...';
+
+        try {
+          await setupCamera();
+          video.play();
+          videoElement.style.display = 'block';
+          canvas.style.display = 'block';
+          drawCanvas.style.display = 'block';
+          drawingControls.style.display = 'flex';
+
+          video.addEventListener('loadeddata', () => {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            setupDrawing();
+          });
+
+          await loadModels();
+          detectFaces();
+
+          startButton.style.display = 'none';
+          resultDiv.innerHTML = 'AI Face Detection started!ø<‰';
+        } catch (error) {
+          console.error('Error starting AI Face Detection:', error);
+          startButton.disabled = false;
+          startButton.textContent = 'Start AI Face Detection';
+          resultDiv.innerHTML = 'Error starting AI Face Detection. Please try again.';
+        }
+      });
+    }
+
+    main();
+
+    function setupDrawing() {
+      drawCanvas.width = video.videoWidth;
+      drawCanvas.height = video.videoHeight;
+
+      drawCanvas.addEventListener('mousedown', startDrawing);
+      drawCanvas.addEventListener('mousemove', draw);
+      drawCanvas.addEventListener('mouseup', stopDrawing);
+      drawCanvas.addEventListener('mouseout', stopDrawing);
+
+      document.getElementById('clearDrawing').addEventListener('click', clearDrawing);
+      document.getElementById('colorPicker').addEventListener('change', (e) => {
+        currentColor = e.target.value;
+        isErasing = false;
+        document.getElementById('eraserTool').classList.remove('active');
+      });
+      document.getElementById('eraserTool').addEventListener('click', () => {
+        isErasing = !isErasing;
+        document.getElementById('eraserTool').classList.toggle('active');
+      });
+      document.getElementById('brushSize').addEventListener('input', (e) => {
+        currentLineWidth = e.target.value;
+      });
+    }
+
+    function startDrawing(e) {
+      isDrawing = true;
+      [lastX, lastY] = getMousePos(drawCanvas, e);
+    }
+
+    function draw(e) {
+      if (!isDrawing) return;
+      const [x, y] = getMousePos(drawCanvas, e);
+
+      drawCtx.beginPath();
+      drawCtx.moveTo(lastX, lastY);
+      drawCtx.lineTo(x, y);
+      drawCtx.strokeStyle = isErasing ? '#FFFFFF' : currentColor;
+      drawCtx.lineWidth = currentLineWidth;
+      drawCtx.lineCap = 'round';
+      drawCtx.lineJoin = 'round';
+      drawCtx.globalCompositeOperation = isErasing ? 'destination-out' : 'source-over';
+      drawCtx.stroke();
+      [lastX, lastY] = [x, y];
+    }
+
+    function stopDrawing() {
+      isDrawing = false;
+    }
+
+    function clearDrawing() {
+      drawCtx.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
+    }
+
+    function resetDrawingContext() {
+      drawCtx.globalCompositeOperation = 'source-over';
+    }
+
+    function getMousePos(canvas, e) {
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      return [
+        (e.clientX - rect.left) * scaleX,
+        (e.clientY - rect.top) * scaleY
+      ];
+    }
+
+    async function detectFaces() {
+      const predictions = await model.estimateFaces(video, false);
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+      if (predictions.length > 0) {
+        for (let i = 0; i < predictions.length; i++) {
+          const start = predictions[i].topLeft;
+          const end = predictions[i].bottomRight;
+          const size = [end[0] - start[0], end[1] - start[1]];
+
+          ctx.strokeStyle = 'lime';
+          ctx.lineWidth = 4;
+          ctx.strokeRect(start[0], start[1], size[0], size[1]);
+
+          const landmarks = predictions[i].landmarks;
+          for (let j = 0; j < landmarks.length; j++) {
+            const x = landmarks[j][0];
+            const y = landmarks[j][1];
+            ctx.beginPath();
+            ctx.arc(x, y, 5, 0, 2 * Math.PI);
+            ctx.fillStyle = 'yellow';
+            ctx.fill();
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+          }
+
+          resetDrawingContext();
+          ctx.save();
+          ctx.beginPath();
+          ctx.ellipse(start[0] + size[0] / 2, start[1] + size[1] / 2, size[0] / 2, size[1] / 2, 0, 0, 2 * Math.PI);
+          ctx.clip();
+          ctx.drawImage(drawCanvas, start[0], start[1], size[0], size[1]);
+          ctx.restore();
+        }
+        resultDiv.innerHTML = `Tracking ${predictions.length} face${predictions.length > 1 ? 's' : ''}!ø=€`;
+      } else {
+        resultDiv.innerHTML = 'No faces detected... yet!øý@';
+      }
+
+      requestAnimationFrame(detectFaces);
+    }
+
+    let currentProject = 0;
+    const projects = document.querySelectorAll('.scratch-carousel-item');
+    const carousel = document.querySelector('.scratch-carousel-inner');
+
+    function changeProject(direction) {
+      currentProject = (currentProject + direction + projects.length) % projects.length;
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      const angle = (currentProject / projects.length) * -360;
+      carousel.style.transform = `rotateY(${angle}deg)`;
+      
+      projects.forEach((project, index) => {
+        const projectAngle = ((index - currentProject) / projects.length) * 360;
+        project.style.transform = `rotateY(${projectAngle}deg) translateZ(300px)`;
+        project.style.opacity = index === currentProject ? 1 : 0.5;
+      });
+    }
+
+    // Initialize the carousel
+    updateCarousel();
+
+    function checkPassword() {
+      const password = document.getElementById('password-input').value;
+      const result = document.getElementById('password-result');
+      const recommendations = document.getElementById('password-recommendations');
+      
+      let strength = 0;
+      let recommendationsList = [];
+
+      if (password.length >= 8) {
+        strength++;
+      } else {
+        recommendationsList.push("Make your password at least 8 characters long");
+      }
+
+      if (password.match(/[a-z]/)) {
+        strength++;
+      } else {
+        recommendationsList.push("Include lowercase letters");
+      }
+
+      if (password.match(/[A-Z]/)) {
+        strength++;
+      } else {
+        recommendationsList.push("Include uppercase letters");
+      }
+
+      if (password.match(/[0-9]/)) {
+        strength++;
+      } else {
+        recommendationsList.push("Include numbers");
+      }
+
+      if (password.match(/[^a-zA-Z0-9]/)) {
+        strength++;
+      } else {
+        recommendationsList.push("Include special characters");
+      }
+
+      let message = '';
+      switch (strength) {
+        case 0:
+        case 1:
+          message = 'Weak! Your password needs a power-up!';
+          break;
+        case 2:
+        case 3:
+          message = 'Getting stronger! Keep going!';
+          break;
+        case 4:
+          message = 'Strong! You\'re becoming a password pro!';
+          break;
+        case 5:
+          message = 'Super strong! You\'re a cyber hero!';
+          break;
+      }
+
+      result.innerHTML = message;
+      result.style.color = ['red', 'orange', 'yellow', 'lightgreen', 'green'][strength - 1];
+
+      if (recommendationsList.length > 0) {
+        recommendations.innerHTML = "<h4>Power-Up Recommendations:</h4><ul>" + 
+          recommendationsList.map(rec => `<li>${rec}</li>`).join('') + 
+          "</ul>";
+      } else {
+        recommendations.innerHTML = "";
+      }
+    }
+
+    document.getElementById('toggle-password').addEventListener('click', function() {
+      const passwordInput = document.getElementById('password-input');
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      this.querySelector('i').classList.toggle('fa-eye');
+      this.querySelector('i').classList.toggle('fa-eye-slash');
+    });
+
+    function encryptMessage() {
+      const message = document.getElementById('message-input').value;
+      const encryptedDiv = document.getElementById('encrypted-message');
+      
+      const shift = 3;
+      const encrypted = message
+        .split('')
+        .map(char => {
+          if (char.match(/[a-z]/i)) {
+            const code = char.charCodeAt(0);
+            const isUpperCase = char === char.toUpperCase();
+            const base = isUpperCase ? 65 : 97;
+            return String.fromCharCode(((code - base + shift) % 26) + base);
+          }
+          return char;
+        })
+        .join('');
+
+      encryptedDiv.innerHTML = `Encrypted message: <strong>${encrypted}</strong>`;
+    }
+  </script>
+</body></html>
