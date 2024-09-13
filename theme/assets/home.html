@@ -250,14 +250,17 @@
     height: auto;
     border-radius: 20px;
     z-index: 1;
+    background: white;
   }
 
   #result {
     margin-top: 1rem;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 4rem;
     color: var(--accent2);
     text-shadow: 1px 1px 0 white;
+    text-align: center; 
+  width: 100%;
   }
 
   @keyframes gradientBG {
@@ -422,7 +425,7 @@
     height: 50px;
     padding: 0;
     border: none;
-    border-radius: 50%;
+    border-radius: 0%;
     overflow: hidden;
     cursor: pointer;
   }
@@ -622,7 +625,7 @@
     </section>
     <section id="ai-demo" class="ai-demo">
       <h2>AI Face Detection Magic!</h2>
-      <p>Witness the power of artificial intelligence! Our AI wizard will track your face in real-time. You can even draw on the top canvas and it will follow your face! Are you ready to be amazed?</p>
+      <p>Witness the power of artificial intelligence! Our AI wizard will track your face in real-time. You can even draw on the white canvas and it will map it to your face! Is this some kind of magic? No, it's Computer Vision!</p>
       <button id="startAI" class="fun-button">Start AI Face Detection</button>
       <div class="canvas-container">
         <video id="videoElement" autoplay playsinline></video>
@@ -735,8 +738,8 @@
         timeLeft--;
         updateTimer();
         if (timeLeft <= 0) {
+          stopGame();
           clearInterval(timer);
-          endGame();
         }
       }, 1000);
     }
@@ -839,12 +842,12 @@
           detectFaces();
 
           startButton.style.display = 'none';
-          resultDiv.innerHTML = 'AI Face Detection started!ø<‰';
+          resultDiv.innerHTML = 'AI Face Detection started!';
         } catch (error) {
           console.error('Error starting AI Face Detection:', error);
           startButton.disabled = false;
           startButton.textContent = 'Start AI Face Detection';
-          resultDiv.innerHTML = 'Error starting AI Face Detection. Please try again.';
+          resultDiv.innerHTML = 'Error starting AI Face Detection. Please try again! (is your camera enabled?)';
         }
       });
     }
@@ -953,9 +956,9 @@
           ctx.drawImage(drawCanvas, start[0], start[1], size[0], size[1]);
           ctx.restore();
         }
-        resultDiv.innerHTML = `Tracking ${predictions.length} face${predictions.length > 1 ? 's' : ''}!ø=€`;
+        resultDiv.innerHTML = `Tracking ${predictions.length} face${predictions.length > 1 ? 's' : ''}!`;
       } else {
-        resultDiv.innerHTML = 'No faces detected... yet!øý@';
+        resultDiv.innerHTML = 'No faces detected... yet!';
       }
 
       requestAnimationFrame(detectFaces);
