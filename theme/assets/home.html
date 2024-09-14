@@ -157,11 +157,13 @@
 
   .scratch-carousel {
     width: 100%;
-    max-width: 485px;
+    max-width: 450px;
     height: 402px;
     position: relative;
     perspective: 1000px;
     margin: 0 auto;
+    overflow: visible;
+    z-index: 0;
   }
 
   .scratch-carousel-inner {
@@ -170,6 +172,7 @@
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    z-index: 0;
   }
 
   .scratch-carousel-item {
@@ -180,27 +183,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
+    opacity: 1;
+  }
+  
+  .scratch-carousel-item.current {
+    opacity: 1; 
+    z-index: 2; 
   }
 
   .scratch-carousel-item iframe {
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
     max-width: 70%; 
     max-height: 70%; 
     border: none;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    z-index: 0;
   }
 
   .scratch-nav {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    z-index: 10;
   }
 
   .scratch-nav button {
     margin: 0 10px;
+    z-index: 10;
   }
 
   .ai-demo {
@@ -625,7 +637,7 @@
     </section>
     <section id="ai-demo" class="ai-demo">
       <h2>AI Face Detection Magic!</h2>
-      <p>Witness the power of artificial intelligence! Our AI wizard will track your face in real-time. You can even draw on the white canvas and it will map it to your face! Is this some kind of magic? No, it's Computer Vision!</p>
+      <p>Witness the power of artificial intelligence! Our AI wizard will track your face in real-time. You can even draw on the white canvas and it will map it to your face (not available on mobile)! Is this some kind of magic? No, it's Computer Vision!</p>
       <button id="startAI" class="fun-button">Start AI Face Detection</button>
       <div class="canvas-container">
         <video id="videoElement" autoplay playsinline></video>
@@ -980,7 +992,7 @@
       projects.forEach((project, index) => {
         const projectAngle = ((index - currentProject) / projects.length) * 360;
         project.style.transform = `rotateY(${projectAngle}deg) translateZ(300px)`;
-        project.style.opacity = index === currentProject ? 1 : 0.5;
+        project.classList.toggle('current', index === currentProject);
       });
     }
 
