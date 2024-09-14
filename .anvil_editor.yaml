@@ -5,7 +5,7 @@ unique_ids:
     standard-page.html: WWBACPS33RBNCCXA2PK6WRJAU7Y52FG6
     theme.css: S7ZOHWFLVB2C34SGSIAEGGCDOE7O7PPA
   forms:
-    Form2: '1726257339686400874413623.94836'
+    Main: '1726257339686400874413623.94836'
   modules: {}
   scripts: {}
   server_modules:
