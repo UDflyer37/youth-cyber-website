@@ -15,12 +15,12 @@ db_schema:
     server: full
     title: Files
 dependencies: []
-metadata: {logo_img: 'asset:IR_Logo.png', title: AYPYN}
-name: Indian River MS After School Program Projects
+metadata: {description: Website to teach youth about cyber concepts and cybersecurity practices in a fun and interactive way., logo_img: 'asset:IR_Logo.png', title: Cyber Adventure Playground}
+name: Youth Cyber App
 native_deps:
   head_html: |
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
-package_name: Indian_River_MS_After_School_Program_Projects
+package_name: Youth_Cyber_App
 renamed: true
 runtime_options:
   client_version: '3'
