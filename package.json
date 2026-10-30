@@ -1,0 +1,28 @@
+{
+  "name": "youth-cyber-website",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Cyber Adventure Playground: hands-on cybersecurity missions for elementary and middle school students.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tensorflow-models/blazeface": "0.1.0",
+    "@tensorflow/tfjs": "4.22.0",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5.9.3"
+  }
+}
