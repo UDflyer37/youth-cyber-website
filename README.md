@@ -1,6 +1,7 @@
 # Cyber Adventure Playground
+**Live at:** [https://youth-cyber-website.vercel.app/](https://youth-cyber-website.vercel.app/)
 
-A free after school cybersecurity program for elementary and middle school students, run by
+A free after school cybersecurity program for elementary and middle school students, originally built for
 **Indian River Middle School**. Five short missions teach the ideas that matter most: password
 strength, encryption, phishing, creative coding, and how machine learning actually sees a face.
 
@@ -70,15 +71,6 @@ on plain HTTP hosts other than localhost.
 npx vercel          # link the project and create a preview deployment
 npx vercel --prod   # promote to production
 ```
-
-**Cutting over from Anvil**
-
-1. Deploy once on Vercel and check the five missions plus the AI Lab on the preview URL.
-2. Point the program's domain at the Vercel project (**Settings → Domains**), and remove it from Anvil.
-3. Keep `cyber-afterschool.anvil.app` alive for one term if you want a fallback, then delete the Anvil app.
-
-The old Anvil files (`anvil.yaml`, `theme/`, `client_code/`, `server_code/`) are not part of the build but
-remain in git history if you ever need to refer back to them.
 
 ## Project structure
 
